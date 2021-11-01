@@ -1,0 +1,19 @@
+{
+  "name": "loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "Landing page challenge from frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "challenge"
+  ],
+  "author": "Souleymane Gael Nongnogo",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
