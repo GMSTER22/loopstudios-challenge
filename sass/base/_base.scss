@@ -2,3 +2,21 @@
 
 // - Mobile: 375px
 // - Desktop: 1440px
+
+*,
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 144rem;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
