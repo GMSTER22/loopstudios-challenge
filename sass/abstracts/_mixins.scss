@@ -1,1 +1,12 @@
+@mixin textPosition {
+    position: relative;
 
+        & > span {
+            position: absolute;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            left: 3rem;
+            bottom: 3rem;
+            color:$color-white;
+        }
+}

@@ -70,14 +70,127 @@ header {
     bottom: 10rem;
     right: -14rem;
     background-color: white;
-    padding: 7.5rem;
-    width: 60%; }
+    padding: 8rem 7.5rem 0;
+    width: 60%;
+    font-weight: 300; }
   .display_title {
     width: 60%;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase; }
+    margin-bottom: 1.8rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300; }
   .display_paragraph {
-    font-family: 'Josefin Sans', sans-serif; }
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5em; }
 
-.gallery_section {
-  margin: 2rem 0; }
+.gallery {
+  display: grid;
+  display: -ms-grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
+  -ms-grid-columns: repeat(4, 23.5rem);
+  -webkit-grid-template-columns: repeat(4, 23.5rem);
+  grid-template-rows: repeat(2, 1fr);
+  -ms-grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "first second third fourth" "fifth sixth seventh eighth";
+  gap: 2rem; }
+  .gallery_header {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 5rem; }
+    .gallery_header h3 {
+      font-size: 3rem;
+      font-weight: 300; }
+    .gallery_header a {
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1px solid black;
+      padding: 1rem 3.5rem;
+      color: black;
+      letter-spacing: 2px; }
+  .gallery > div {
+    width: 100%; }
+    .gallery > div > img {
+      width: 100%;
+      height: 100%; }
+  .gallery .first {
+    grid: 1/1/2/2;
+    position: relative; }
+    .gallery .first > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .second {
+    grid: 1/2/2/3;
+    position: relative; }
+    .gallery .second > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .third {
+    grid: 1/3/2/4;
+    position: relative; }
+    .gallery .third > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .fourth {
+    grid: 1/4/2/5;
+    position: relative; }
+    .gallery .fourth > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .fifth {
+    grid: 2/1/3/2;
+    position: relative; }
+    .gallery .fifth > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .sixth {
+    grid: 2/2/3/3;
+    position: relative; }
+    .gallery .sixth > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .seventh {
+    grid: 2/3/3/4;
+    position: relative; }
+    .gallery .seventh > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
+  .gallery .eighth {
+    grid: 2/4/3/5;
+    position: relative; }
+    .gallery .eighth > span {
+      position: absolute;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      left: 3rem;
+      bottom: 3rem;
+      color: white; }
