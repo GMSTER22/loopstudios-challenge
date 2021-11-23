@@ -87,6 +87,7 @@ header {
   display: grid;
   display: -ms-grid;
   width: 100%;
+  padding: 0 0 10rem;
   grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
   -ms-grid-columns: repeat(4, 23.5rem);
   -webkit-grid-template-columns: repeat(4, 23.5rem);
@@ -99,7 +100,7 @@ header {
     justify-content: space-between;
     text-transform: uppercase;
     margin-bottom: 5rem; }
-    .gallery_header h3 {
+    .gallery_header h2 {
       font-size: 3rem;
       font-weight: 300; }
     .gallery_header a {
@@ -194,3 +195,23 @@ header {
       left: 3rem;
       bottom: 3rem;
       color: white; }
+
+.footer {
+  background-color: black;
+  padding: 2rem 0; }
+  .footer_socials {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0; }
+  .footer_logo > img {
+    width: 10rem; }
+  .footer_icons > img {
+    width: 1.5rem; }
+    .footer_icons > img:not(:last-of-type) {
+      margin-right: .5rem; }
+  .footer_nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem; }
+  .footer_copyright {
+    color: white; }

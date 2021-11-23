@@ -35,6 +35,7 @@
     display: grid;
     display: -ms-grid;
     width: 100%;
+    padding: 0 0 10rem;
     grid-template-columns: repeat(4, minmax(1fr,23.5rem));
     -ms-grid-columns: repeat(4, 23.5rem);
     -webkit-grid-template-columns: repeat(4, 23.5rem);
@@ -51,7 +52,7 @@
         text-transform: uppercase;
         margin-bottom: 5rem;
 
-        & h3 {
+        & h2 {
             font-size: 3rem;
             font-weight: 300;
         }
@@ -109,4 +110,37 @@
         @include textPosition;
     }
     
+}
+
+.footer {
+    background-color: $color-black;
+    padding: 2rem 0;
+
+    &_socials {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+    &_logo > img {
+        width: 10rem;
+    }
+    
+    &_icons > img{
+        width: 1.5rem;
+
+        &:not(:last-of-type)  {
+            margin-right: .5rem;
+        }
+    }
+
+    &_nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+
+    &_copyright {
+        color: $color-white;
+    }
 }
