@@ -10,3 +10,30 @@
             color:$color-white;
         }
 }
+
+
+// @mixin respond($breakpoint) {
+//     @if ($breakpoint == extra-small-device) {
+//         @media (max-width: 23.5em) {@content};
+//     }
+//     @if ($breakpoint == small-device) {
+//         @media (max-width: 36em) {@content};
+//     }
+//     @if ($breakpoint == medium-device) {
+//         @media (max-width: 48em) {@content};
+//     }
+//     @if ($breakpoint == large-device) {
+//         @media (max-width: 62em) {@content};
+//     }
+//     @if ($breakpoint == extra-large-device) {
+//         @media (max-width: 75em) {@content};
+//     }
+// }  
+
+@mixin media($bkp) {
+    @if ($bkp == phone) {
+        @media (max-width: 23.5em) {
+            @content
+        }
+    }
+}
