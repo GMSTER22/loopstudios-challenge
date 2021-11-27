@@ -10,8 +10,15 @@
 // - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
 // - Weight: 300
 
+// font-family: 'Alata', sans-serif;
+// font-family: 'Josefin Sans', sans-serif;
+
 html {
     font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 62.5%;
+    }
 }
 
 body {
@@ -19,5 +26,3 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-// font-family: 'Alata', sans-serif;
-// font-family: 'Josefin Sans', sans-serif;

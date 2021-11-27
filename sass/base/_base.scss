@@ -1,7 +1,11 @@
 // The designs were created to the following widths:
-
 // - Mobile: 375px
 // - Desktop: 1440px
+
+:root {
+    scroll-behavior: smooth;
+}
+
 
 *,
 *::after, 
@@ -13,10 +17,18 @@
 
 body {
     max-width: 144rem;
+
+    @include respond(phone) {
+        max-width: 100vw;
+    }
 }
 
 .container {
     max-width: 100rem;
     margin: 0 auto;
+
+    @include respond(phone) {
+        max-width: 90%;
+    }    
 }
 

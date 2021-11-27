@@ -30,9 +30,9 @@
 //     }
 // }  
 
-@mixin media($bkp) {
+@mixin respond($bkp) {
     @if ($bkp == phone) {
-        @media (max-width: 23.5em) {
+        @media (max-width: 23.44em) {
             @content
         }
     }
