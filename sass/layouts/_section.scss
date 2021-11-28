@@ -13,7 +13,7 @@
 
         @include respond(phone) {
             width: 100%;
-            padding: 7rem 0;
+            padding: 8rem 0 4rem 0;
         }
     }
 
@@ -30,6 +30,7 @@
             position: static;
             width: 80%;
             padding: 0;
+            margin: 0 auto;
             text-align: center;
         }
     }
@@ -43,7 +44,7 @@
 
         @include respond(phone) {
             font-size: 2.5rem;
-            width: 80%;
+            width: 100%;
             text-align: center;
         }
     }
@@ -60,11 +61,17 @@
     width: 100%;
     padding: 0 0 10rem;
     grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
-    // -ms-grid-columns: repeat(4, 23.5rem);
-    // -webkit-grid-template-columns: repeat(4, 23.5rem);
-    grid-template-rows: auto repeat(2, 1fr);
-    -ms-grid-template-rows: auto repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
+    -webkit-grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
+    grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
+    -ms-grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
+    -webkit-grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
     gap: 2rem;
+
+    @include respond(phone) {
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto repeat(8, minmax(14rem, auto)) auto;
+    }
 
     &_header {
         grid-area: 1/1/2/3;
@@ -72,11 +79,21 @@
         font-size: 4rem;
         font-weight: 300;
         text-align: left;
+        align-self: center;
+
+        @include respond(phone) {
+            grid-area: 1/1/2/2;
+        }
     }
 
     &_link {
         grid-area: 1/3/2/5;
         text-align: right;
+        align-self: center;
+
+        @include respond(phone) {
+            grid-area: 10/1/11/2;
+        }
         
         & a {
             font-size: 1rem;
@@ -100,36 +117,70 @@
 
     .first {
         grid-area: 2/1/3/2;
+        background: url(/images/desktop/image-deep-earth.jpg) no-repeat center;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 2/1/3/2;
+            background: url(/images/mobile/image-deep-earth.jpg) no-repeat center;
+        }
     }
 
     .second {
         grid-area: 2/2/3/3;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 3/1/4/2;
+        }
     }
     .third {
         grid-area: 2/3/3/4;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 4/1/5/2;
+        }
     }
     .fourth {
         grid-area: 2/4/3/5;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 5/1/6/2;
+        }
     }
     .fifth {
         grid-area: 3/1/4/2;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 6/1/7/2;
+        }
     }
     .sixth {
         grid-area: 3/2/4/3;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 7/1/8/2;
+        }
     }
     .seventh {
         grid-area: 3/3/4/4;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 8/1/9/2;
+        }
     }
     .eighth {
         grid-area: 3/4/4/5;
         @include textPosition;
+
+        @include respond(phone) {
+            grid-area: 9/1/10/2;
+        }
     }
     
 }

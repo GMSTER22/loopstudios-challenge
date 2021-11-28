@@ -20,13 +20,13 @@ header {
 
     &_logo > img {
         @include respond(phone) {
-            width: 45%;
+            width: 70%;
         }
     }
      
     @include respond(phone) {
         background-color: red;
-        padding: 1rem 0;
+        padding: 2rem 0;
         // display: inline-block;
     }
 }
@@ -67,8 +67,13 @@ header {
     padding: 1.5rem;
 
     @include respond(phone) {
-        font-size: 2rem;
-        width: 80%;
+        position: absolute;
         margin-top: 0;
+        padding: 3rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        width: 90%;
     }
 }
