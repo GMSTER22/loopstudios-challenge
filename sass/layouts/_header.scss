@@ -12,10 +12,50 @@ header {
     }
 }
 
+.menu {
+    &_button {
+        display: block;
+        width: 2.2rem;
+        height: .3rem;
+        border-radius: 1rem;
+        background-color: #fff;
+
+        &:not(:last-of-type) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &.active {
+        background-color: transparent;
+        
+
+        & > .menu_button {
+            background-color: white;
+            transition: transform .3s linear;
+            margin-bottom: 0;
+
+            &:first-of-type {
+                background-color: white;
+                transform: rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                display: none;
+            }
+
+            &:last-of-type {
+                background-color: white;
+                transform: translateY(-.3rem) rotate(-45deg);
+            }
+        }
+    }
+}
+
 .navigation {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5rem 0;    
 
     &_logo > img {
@@ -25,8 +65,8 @@ header {
     }
      
     @include respond(phone) {
-        background-color: red;
-        padding: 2rem 0;
+        background-color: transparent;
+        padding: 3rem 0;
         // display: inline-block;
     }
 }

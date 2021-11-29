@@ -43,18 +43,43 @@ header {
       background-size: 375px 780px;
       background-position: center; } }
 
+.menu_button {
+  display: block;
+  width: 2.2rem;
+  height: .3rem;
+  border-radius: 1rem;
+  background-color: #fff; }
+  .menu_button:not(:last-of-type) {
+    margin-bottom: .5rem; }
+
+.menu.active {
+  background-color: transparent; }
+  .menu.active > .menu_button {
+    background-color: white;
+    transition: transform .3s linear;
+    margin-bottom: 0; }
+    .menu.active > .menu_button:first-of-type {
+      background-color: white;
+      transform: rotate(45deg); }
+    .menu.active > .menu_button:nth-of-type(2) {
+      display: none; }
+    .menu.active > .menu_button:last-of-type {
+      background-color: white;
+      transform: translateY(-0.3rem) rotate(-45deg); }
+
 .navigation {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5rem 0; }
   @media screen and (max-width: 23.44em) {
     .navigation_logo > img {
       width: 70%; } }
   @media screen and (max-width: 23.44em) {
     .navigation {
-      background-color: red;
-      padding: 2rem 0; } }
+      background-color: transparent;
+      padding: 3rem 0; } }
 
 .navbar_list {
   list-style: none; }
@@ -101,13 +126,13 @@ header {
   @media screen and (max-width: 23.44em) {
     .display {
       width: 100%;
-      padding: 0 0; } }
+      padding: 10rem 0 rem 0; } }
   .display_image > img {
     width: 70%; }
     @media screen and (max-width: 23.44em) {
       .display_image > img {
         width: 100%;
-        padding: 8rem 0 4rem 0; } }
+        margin-bottom: 4rem; } }
   .display_text {
     position: absolute;
     bottom: 10rem;
@@ -131,7 +156,7 @@ header {
     font-weight: 300; }
     @media screen and (max-width: 23.44em) {
       .display_title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         width: 100%;
         text-align: center; } }
   .display_paragraph {
@@ -143,12 +168,12 @@ header {
   display: -ms-grid;
   width: 100%;
   padding: 0 0 10rem;
-  grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
-  -ms-grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
-  -webkit-grid-template-columns: repeat(4, minmax(1fr, 23.5rem));
-  grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
-  -ms-grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
-  -webkit-grid-template-rows: minmax(10rem, auto) repeat(2, 1fr);
+  grid-template-columns: repeat(4, minmax(auto, 23.5rem));
+  -ms-grid-columns: repeat(4, minmax(auto, 23.5rem));
+  -webkit-grid-columns: repeat(4, minmax(auto, 23.5rem));
+  grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
+  -ms-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
+  -webkit-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
   gap: 2rem; }
   @media screen and (max-width: 23.44em) {
     .gallery {
@@ -163,14 +188,19 @@ header {
     align-self: center; }
     @media screen and (max-width: 23.44em) {
       .gallery_header {
-        grid-area: 1/1/2/2; } }
+        grid-area: 1/1/2/2;
+        font-size: 2.8rem;
+        justify-self: center;
+        padding-bottom: 3rem; } }
   .gallery_link {
     grid-area: 1/3/2/5;
     text-align: right;
     align-self: center; }
     @media screen and (max-width: 23.44em) {
       .gallery_link {
-        grid-area: 10/1/11/2; } }
+        grid-area: 10/1/11/2;
+        text-align: center;
+        padding-top: 2rem; } }
     .gallery_link a {
       font-size: 1rem;
       text-decoration: none;
@@ -198,9 +228,11 @@ header {
     @media screen and (max-width: 23.44em) {
       .gallery .first {
         grid-area: 2/1/3/2;
-        background: url(/images/mobile/image-deep-earth.jpg) no-repeat center; } }
+        background: url(/images/mobile/image-deep-earth.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .second {
     grid-area: 2/2/3/3;
+    background: url(/images/desktop/image-night-arcade.jpg) no-repeat center;
     position: relative; }
     .gallery .second > span {
       position: absolute;
@@ -211,9 +243,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .second {
-        grid-area: 3/1/4/2; } }
+        grid-area: 3/1/4/2;
+        background: url(/images/mobile/image-night-arcade.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .third {
     grid-area: 2/3/3/4;
+    background: url(/images/desktop/image-soccer-team.jpg) no-repeat center;
     position: relative; }
     .gallery .third > span {
       position: absolute;
@@ -224,9 +259,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .third {
-        grid-area: 4/1/5/2; } }
+        grid-area: 4/1/5/2;
+        background: url(/images/mobile/image-soccer-team.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .fourth {
     grid-area: 2/4/3/5;
+    background: url(/images/desktop/image-grid.jpg) no-repeat center;
     position: relative; }
     .gallery .fourth > span {
       position: absolute;
@@ -237,9 +275,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .fourth {
-        grid-area: 5/1/6/2; } }
+        grid-area: 5/1/6/2;
+        background: url(/images/mobile/image-grid.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .fifth {
     grid-area: 3/1/4/2;
+    background: url(/images/desktop/image-from-above.jpg) no-repeat center;
     position: relative; }
     .gallery .fifth > span {
       position: absolute;
@@ -250,9 +291,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .fifth {
-        grid-area: 6/1/7/2; } }
+        grid-area: 6/1/7/2;
+        background: url(/images/mobile/image-from-above.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .sixth {
     grid-area: 3/2/4/3;
+    background: url(/images/desktop/image-pocket-borealis.jpg) no-repeat center;
     position: relative; }
     .gallery .sixth > span {
       position: absolute;
@@ -263,9 +307,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .sixth {
-        grid-area: 7/1/8/2; } }
+        grid-area: 7/1/8/2;
+        background: url(/images/mobile/image-pocket-borealis.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .seventh {
     grid-area: 3/3/4/4;
+    background: url(/images/desktop/image-curiosity.jpg) no-repeat center;
     position: relative; }
     .gallery .seventh > span {
       position: absolute;
@@ -276,9 +323,12 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .seventh {
-        grid-area: 8/1/9/2; } }
+        grid-area: 8/1/9/2;
+        background: url(/images/mobile/image-curiosity.jpg) no-repeat center;
+        background-size: cover; } }
   .gallery .eighth {
     grid-area: 3/4/4/5;
+    background: url(/images/desktop/image-fisheye.jpg) no-repeat center;
     position: relative; }
     .gallery .eighth > span {
       position: absolute;
@@ -289,7 +339,9 @@ header {
       color: white; }
     @media screen and (max-width: 23.44em) {
       .gallery .eighth {
-        grid-area: 9/1/10/2; } }
+        grid-area: 9/1/10/2;
+        background: url(/images/mobile/image-fisheye.jpg) no-repeat center;
+        background-size: cover; } }
 
 .footer {
   background-color: black;
