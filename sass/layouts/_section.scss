@@ -59,17 +59,21 @@
     display: grid;
     display: -ms-grid;
     width: 100%;
-    padding: 0 0 10rem;
-    grid-template-columns: repeat(4, minmax(auto, 23.5rem));
-    -ms-grid-columns: repeat(4, minmax(auto, 23.5rem));
+    padding: 0 0 10rem;    
     -webkit-grid-columns: repeat(4, minmax(auto, 23.5rem));
-    grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
-    -ms-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
+    -ms-grid-columns: repeat(4, minmax(auto, 23.5rem));
+    grid-template-columns: repeat(4, minmax(auto, 23.5rem));
     -webkit-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
+    -ms-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
+    grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
     gap: 2rem;
 
     @include respond(phone) {
+        -ms-grid-columns: minmax(auto, 1fr);
+        -webkit-grid-columns: minmax(auto, 1fr);
         grid-template-columns: minmax(auto, 1fr);
+        -ms-grid-rows: auto repeat(8, minmax(14rem, auto)) auto;
+        -webkit-grid-rows: auto repeat(8, minmax(14rem, auto)) auto;
         grid-template-rows: auto repeat(8, minmax(14rem, auto)) auto;
     }
 
@@ -215,36 +219,108 @@
 .footer {
     background-color: $color-black;
     padding: 2rem 0;
-
-    &_socials {
-        display: flex;
-        justify-content: space-between;
-        padding: 2rem 0;
-    }
-
-    &_logo > img {
-        width: 10rem;
-    }
     
-    &_icons > img{
-        width: 1.5rem;
+    &_navigation {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: repeat(2, auto);
+        -webkit-grid-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+        -ms-grid-rows: repeat(2, minmax(auto, 3rem));
+        -webkit-grid-rows: repeat(2, minmax(auto, 3rem));
+        grid-template-rows: repeat(2, minmax(auto, 3rem));
+        align-items: center;
 
-        &:not(:last-of-type)  {
-            margin-right: .5rem;
+        @include respond(phone) {
+            -ms-grid-columns: auto;
+            -webkit-grid-columns: auto;
+            grid-template-columns: auto;
+            -ms-grid-rows: repeat(4, auto);
+            -webkit-grid-rows: repeat(4, auto);
+            grid-template-rows: repeat(4, auto);
+            justify-content: center;
+            font-size: 3rem;
         }
     }
 
-    &_nav {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1rem;
+    &_logo {
+        
+        @include respond(phone) {
+            grid-area: 1/1/2/2;
+            justify-self: center;
+            padding: 2rem 0;
+        } 
+
+        & > img {
+            width: 10rem;
+
+            @include respond(phone) {
+                width: 15rem;
+            }
+        }
+    }
+
+    &_menu {
+        font-size: 1.1rem;
+
+        @include respond(phone) {            
+            grid-area: 2/1/3/2;
+        }
+
+        & > .navbar_list {
+
+            & > .navbar_item {
+                @include respond(phone) {
+                    display: block;
+                    margin: 0;
+                    text-align: center;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+
+    &_icons {
+        justify-self: end;
+        // grid-area: 2/2/2/3;
+
+        @include respond(phone) {
+            grid-area: 3/1/4/2;
+            justify-self: center;
+            padding: 2rem 0;
+        }
+
+        & > img{
+            width: 1.5rem;
+            cursor: pointer;
+            align-self: end;  
+            
+            @include respond(phone) {
+                width: 2rem;
+            }
+    
+            &:not(:last-of-type)  {
+                margin-right: .5rem;
+            }
+        }
     }
 
     &_copyright {
+        font-size: 1.1rem;
         color: $color-white;
+        justify-self: end;
+
+        @include respond(phone) {
+            grid-area: 4/1/5/2;
+            font-size: 1.3rem;
+        }
     }
 }
 
 .attribution {
     background-color: rgb(218, 145, 173);
+
+    @include respond(phone) {
+        text-align: center;
+    }
 }
