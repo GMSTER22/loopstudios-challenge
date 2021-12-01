@@ -318,9 +318,26 @@
 }
 
 .attribution {
-    background-color: rgb(218, 145, 173);
+    background-color: #7c04b3;
+    font-size: 1.6rem;
+    color: black;
+    padding: .8rem 0;
+    text-align: center;
+
+    & a {
+        display: inline-block;
+        color: #96FA1B;
+        text-decoration: none;
+        transition: transform .2s linear;
+
+        &:hover {
+            color: $color-white;
+            transform: scale(1.05);
+        }
+    }
 
     @include respond(phone) {
+        width: 100%;
         text-align: center;
     }
 }

@@ -4,6 +4,7 @@ header {
     background: url(../../images/desktop/image-hero.jpg) no-repeat center;
 
     @include respond(phone) {
+        position: relative;
         width: 100%;
         height: 100vh;
         background: url(../../images/mobile/image-hero.jpg);
@@ -18,27 +19,27 @@ header {
 
     @include respond(phone) {
         display: block;
+        position: relative;
+        z-index: 2;
     }
 
     &_button {
         display: block;
-        width: 2.2rem;
+        width: 2.5rem;
         height: .3rem;
         border-radius: 1rem;
         background-color: #fff;
 
         &:not(:last-of-type) {
-            margin-bottom: .5rem;
+            margin-bottom: .6rem;
         }
     }
 
-    &.active {
-        background-color: transparent;
-        
+    &.active {       
 
         & > .menu_button {
             background-color: white;
-            transition: transform .3s linear;
+            transition: transform .15s linear;
             margin-bottom: 0;
 
             &:first-of-type {
@@ -55,6 +56,47 @@ header {
                 transform: translateY(-.3rem) rotate(-45deg);
             }
         }
+
+        & + .navbar {
+            @include respond(phone) {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $color-black;
+                color: $color-white;
+                z-index: 1;
+            }
+
+            & > .navbar_list {
+                
+                @include respond(phone) {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    padding: 2rem;
+                }
+
+                & > .navbar_item {
+                    display: block;
+                    font-size: 2.5rem;
+
+                    &:not(:last-of-type) {
+                        @include respond(phone) {
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    & > .navbar_link {
+                        font-family: 'Alata', sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -63,7 +105,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem 0;    
+    padding: 5rem 0;
 
     &_logo > img {
         @include respond(phone) {
@@ -72,9 +114,7 @@ header {
     }
      
     @include respond(phone) {
-        background-color: transparent;
         padding: 3rem 0;
-        // display: inline-block;
     }
 }
 
