@@ -3,6 +3,11 @@ header {
     height: 100vh;
     background: url(../../images/desktop/image-hero.jpg) no-repeat center;
 
+    @include respond(tablet) {
+        position: relative;
+        width: 100%;
+    }
+
     @include respond(phone) {
         position: relative;
         width: 100%;
@@ -161,10 +166,6 @@ header {
             text-align: center;
             margin-top: .8rem;
         }
-        // &:hover {
-        //     border-bottom: .2rem solid white;
-        //     width: 20%;
-        // }
     }
 
     @include respond(phone) {
@@ -190,7 +191,11 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 4rem;
-        width: 90%;
+        font-size: 3rem;
+        width: 70%;
+    }
+
+    @include respond(phone-XS) {
+        font-size: 2.5rem;
     }
 }

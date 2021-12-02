@@ -11,6 +11,11 @@
     &_image > img {
         width: 70%;
 
+        @include respond(tablet) {
+            width: 100%;
+            margin-bottom: 3.5rem;
+        }
+
         @include respond(phone) {
             width: 100%;
             margin-bottom: 4rem;
@@ -25,6 +30,19 @@
         padding: 8rem 7.5rem 0;
         width: 60%;
         font-weight: 300;
+
+        @include respond(laptop) {
+            right: 0;
+            padding: 5rem 4.5rem 0;
+        }
+
+        @include respond(tablet) {
+            position: static;
+            width: 80%;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
 
         @include respond(phone) {
             position: static;
@@ -42,6 +60,16 @@
         font-size: 4rem;
         font-weight: 300;
 
+        @include respond(laptop) {
+            width: 60%;
+            font-size: 2.5rem;
+        }
+
+        @include respond(tablet) {
+            width: 100%;
+            text-align: center;
+        }
+
         @include respond(phone) {
             font-size: 2.8rem;
             width: 100%;
@@ -52,6 +80,14 @@
     &_paragraph {
         font-family: 'Josefin Sans', sans-serif;
         line-height: 1.5em;
+
+        @include respond(laptop) {
+            font-size: 1.8rem;
+        }
+
+        @include respond(tablet) {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -67,6 +103,20 @@
     -ms-grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
     grid-template-rows: minmax(10rem, auto) repeat(2, minmax(30rem, 40rem));
     gap: 2rem;
+
+    @include respond(laptop) {
+        -webkit-grid-columns: repeat(4, minmax(10rem, auto));
+        -ms-grid-columns: repeat(4, minmax(10em, auto));
+        grid-template-columns: repeat(4, minmax(10em, auto));
+        gap: 1rem;
+    }
+
+    @include respond(tablet) {
+        -webkit-grid-columns: repeat(4, minmax(10rem, auto));
+        -ms-grid-columns: repeat(4, minmax(10em, auto));
+        grid-template-columns: repeat(4, minmax(10em, auto));
+        gap: 1rem;
+    }
 
     @include respond(phone) {
         -ms-grid-columns: minmax(auto, 1fr);
@@ -334,7 +384,7 @@
 .attribution {
     background-color: #7c04b3;
     font-size: 1.6rem;
-    color: black;
+    color: $color-white;
     padding: .8rem 0;
     text-align: center;
 

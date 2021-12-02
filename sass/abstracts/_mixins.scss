@@ -11,29 +11,30 @@
         }
 }
 
-
-// @mixin respond($breakpoint) {
-//     @if ($breakpoint == extra-small-device) {
-//         @media (max-width: 23.5em) {@content};
-//     }
-//     @if ($breakpoint == small-device) {
-//         @media (max-width: 36em) {@content};
-//     }
-//     @if ($breakpoint == medium-device) {
-//         @media (max-width: 48em) {@content};
-//     }
-//     @if ($breakpoint == large-device) {
-//         @media (max-width: 62em) {@content};
-//     }
-//     @if ($breakpoint == extra-large-device) {
-//         @media (max-width: 75em) {@content};
-//     }
-// }  
-
 @mixin respond($bkp) {
-    @if ($bkp == phone) {
+    @if ($bkp == phone-XS) {
+        @media screen and (max-width: 20em) {
+            @content
+        };
+    }
+    @if ($bkp == phone-small) {
         @media screen and (max-width: 23.44em) {
             @content
-        }
+        };
+    }
+    @if ($bkp == phone) {
+        @media(max-width: 27em) {
+            @content
+        };
+    }
+    @if ($bkp == tablet) {
+        @media screen and (max-width: 48em) {
+            @content
+        };
+    }
+    @if ($bkp == laptop) {
+        @media screen and (max-width: 64em) {
+            @content
+        };
     }
 }
