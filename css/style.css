@@ -45,7 +45,7 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background: url(../../images/desktop/image-hero.jpg) no-repeat center; }
+  background: url(../images/desktop/image-hero.jpg) no-repeat center; }
   @media screen and (max-width: 48em) {
     header {
       position: relative;
@@ -55,7 +55,7 @@ header {
       position: relative;
       width: 100%;
       height: 100vh;
-      background: url(../../images/mobile/image-hero.jpg);
+      background: url(../images/mobile/image-hero.jpg);
       background-size: 375px 780px;
       background-position: center; } }
 
@@ -143,7 +143,7 @@ header {
   text-decoration: none;
   text-transform: capitalize;
   position: relative; }
-  .navbar_link:hover:after {
+  .navbar_link:hover::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -329,7 +329,7 @@ header {
       height: 100%; }
   .gallery .first {
     grid-area: 2/1/3/2;
-    background: url(/images/desktop/image-deep-earth.jpg) no-repeat center;
+    background: url(../images/desktop/image-deep-earth.jpg) no-repeat center;
     position: relative; }
     .gallery .first > span {
       position: absolute;
@@ -341,11 +341,11 @@ header {
     @media (max-width: 27em) {
       .gallery .first {
         grid-area: 2/1/3/2;
-        background: url(/images/mobile/image-deep-earth.jpg) no-repeat center;
+        background: url(../images/mobile/image-deep-earth.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .second {
     grid-area: 2/2/3/3;
-    background: url(/images/desktop/image-night-arcade.jpg) no-repeat center;
+    background: url(../images/desktop/image-night-arcade.jpg) no-repeat center;
     position: relative; }
     .gallery .second > span {
       position: absolute;
@@ -357,11 +357,11 @@ header {
     @media (max-width: 27em) {
       .gallery .second {
         grid-area: 3/1/4/2;
-        background: url(/images/mobile/image-night-arcade.jpg) no-repeat center;
+        background: url(../images/mobile/image-night-arcade.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .third {
     grid-area: 2/3/3/4;
-    background: url(/images/desktop/image-soccer-team.jpg) no-repeat center;
+    background: url(../images/desktop/image-soccer-team.jpg) no-repeat center;
     position: relative; }
     .gallery .third > span {
       position: absolute;
@@ -373,11 +373,11 @@ header {
     @media (max-width: 27em) {
       .gallery .third {
         grid-area: 4/1/5/2;
-        background: url(/images/mobile/image-soccer-team.jpg) no-repeat center;
+        background: url(../images/mobile/image-soccer-team.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .fourth {
     grid-area: 2/4/3/5;
-    background: url(/images/desktop/image-grid.jpg) no-repeat center;
+    background: url(../images/desktop/image-grid.jpg) no-repeat center;
     position: relative; }
     .gallery .fourth > span {
       position: absolute;
@@ -389,11 +389,11 @@ header {
     @media (max-width: 27em) {
       .gallery .fourth {
         grid-area: 5/1/6/2;
-        background: url(/images/mobile/image-grid.jpg) no-repeat center;
+        background: url(../images/mobile/image-grid.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .fifth {
     grid-area: 3/1/4/2;
-    background: url(/images/desktop/image-from-above.jpg) no-repeat center;
+    background: url(../images/desktop/image-from-above.jpg) no-repeat center;
     position: relative; }
     .gallery .fifth > span {
       position: absolute;
@@ -405,11 +405,11 @@ header {
     @media (max-width: 27em) {
       .gallery .fifth {
         grid-area: 6/1/7/2;
-        background: url(/images/mobile/image-from-above.jpg) no-repeat center;
+        background: url(../images/mobile/image-from-above.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .sixth {
     grid-area: 3/2/4/3;
-    background: url(/images/desktop/image-pocket-borealis.jpg) no-repeat center;
+    background: url(../images/desktop/image-pocket-borealis.jpg) no-repeat center;
     position: relative; }
     .gallery .sixth > span {
       position: absolute;
@@ -421,11 +421,11 @@ header {
     @media (max-width: 27em) {
       .gallery .sixth {
         grid-area: 7/1/8/2;
-        background: url(/images/mobile/image-pocket-borealis.jpg) no-repeat center;
+        background: url(../images/mobile/image-pocket-borealis.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .seventh {
     grid-area: 3/3/4/4;
-    background: url(/images/desktop/image-curiosity.jpg) no-repeat center;
+    background: url(../images/desktop/image-curiosity.jpg) no-repeat center;
     position: relative; }
     .gallery .seventh > span {
       position: absolute;
@@ -437,11 +437,11 @@ header {
     @media (max-width: 27em) {
       .gallery .seventh {
         grid-area: 8/1/9/2;
-        background: url(/images/mobile/image-curiosity.jpg) no-repeat center;
+        background: url(../images/mobile/image-curiosity.jpg) no-repeat center;
         background-size: cover; } }
   .gallery .eighth {
     grid-area: 3/4/4/5;
-    background: url(/images/desktop/image-fisheye.jpg) no-repeat center;
+    background: url(../images/desktop/image-fisheye.jpg) no-repeat center;
     position: relative; }
     .gallery .eighth > span {
       position: absolute;
@@ -453,7 +453,7 @@ header {
     @media (max-width: 27em) {
       .gallery .eighth {
         grid-area: 9/1/10/2;
-        background: url(/images/mobile/image-fisheye.jpg) no-repeat center;
+        background: url(../images/mobile/image-fisheye.jpg) no-repeat center;
         background-size: cover; } }
 
 .footer {
