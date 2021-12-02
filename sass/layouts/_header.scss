@@ -13,92 +13,6 @@ header {
     }
 }
 
-.menu {
-    display: none;
-    cursor: pointer;
-
-    @include respond(phone) {
-        display: block;
-        position: relative;
-        z-index: 2;
-    }
-
-    &_button {
-        display: block;
-        width: 2.5rem;
-        height: .3rem;
-        border-radius: 1rem;
-        background-color: #fff;
-
-        &:not(:last-of-type) {
-            margin-bottom: .6rem;
-        }
-    }
-
-    &.active {       
-
-        & > .menu_button {
-            background-color: white;
-            transition: transform .15s linear;
-            margin-bottom: 0;
-
-            &:first-of-type {
-                background-color: white;
-                transform: rotate(45deg);
-            }
-
-            &:nth-of-type(2) {
-                display: none;
-            }
-
-            &:last-of-type {
-                background-color: white;
-                transform: translateY(-.3rem) rotate(-45deg);
-            }
-        }
-
-        & + .navbar {
-            @include respond(phone) {
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $color-black;
-                color: $color-white;
-                z-index: 1;
-            }
-
-            & > .navbar_list {
-                
-                @include respond(phone) {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    padding: 2rem;
-                }
-
-                & > .navbar_item {
-                    display: block;
-                    font-size: 2.5rem;
-
-                    &:not(:last-of-type) {
-                        @include respond(phone) {
-                            margin-bottom: 2rem;
-                        }
-                    }
-
-                    & > .navbar_link {
-                        font-family: 'Alata', sans-serif;
-                        text-transform: uppercase;
-                    }
-                }
-            }
-        }
-    }
-}
 
 .navigation {
     width: 100%;
@@ -116,6 +30,96 @@ header {
     @include respond(phone) {
         padding: 3rem 0;
     }
+
+    &.active {
+
+        @include respond(phone) {  
+            & > .navigation_logo {
+                position: relative;
+                z-index: 11;
+            }
+
+            & > .menu {   
+                position: relative; 
+                z-index: 11;                      
+
+                & > .menu_button {
+                    background-color: white;
+                    transition: transform .15s linear;
+                    margin-bottom: 0;
+        
+                    &:first-of-type {
+                        background-color: white;
+                        transform: translateY(0.7rem) rotate(45deg);
+                    }
+        
+                    &:nth-of-type(2) {
+                        display: none;
+                    }
+        
+                    &:last-of-type {
+                        background-color: white;
+                        transform: translateY(.4rem) rotate(-45deg);
+                    }
+                }
+            }
+
+
+            & {
+                & > .navbar {
+                    background-color: $color-black;
+                    width: 100%;
+                    height: 100vh;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    // font-family: 'Alata', sans-serif;
+                    // font-family: 'Josefin Sans', sans-serif;
+
+                    & > .navbar_list {                        
+                        position: absolute;
+                        top: 50%;
+                        left: 5%;
+                        transform: translate(5%, -50%);
+
+                        & > .navbar_item {
+                            display: block;
+                            font-family: 'Josefin', sans-serif;
+                            font-size: 2.5rem;
+
+                            & > .navbar_link {
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    padding: .5rem;
+
+    @include respond(phone) {
+        display: block;
+    }
+
+    &_button {
+        display: block;
+        width: 2.5rem;
+        height: .3rem;
+        border-radius: 1rem;
+        background-color: #fff;
+
+        &:not(:last-of-type) {
+            margin-bottom: .6rem;
+        }
+    }
 }
 
 .navbar {
@@ -129,12 +133,38 @@ header {
         &:not(:last-of-type) {
             margin-right: 2rem;
         }
+
+        @include respond(phone) {
+
+
+            &:not(:last-of-type) {
+                margin-bottom: 2.5rem;
+            }
+        }
     }
 
     &_link {
         color: $color-white;
         text-decoration: none;
         text-transform: capitalize;
+        position: relative;
+
+        &:hover:after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            width: 50%;
+            height: .3rem;
+            background-color: $color-white;
+            text-align: center;
+            margin-top: .8rem;
+        }
+        // &:hover {
+        //     border-bottom: .2rem solid white;
+        //     width: 20%;
+        // }
     }
 
     @include respond(phone) {
