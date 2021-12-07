@@ -52,7 +52,7 @@ Users should be able to:
 -Used SASS mixins to group some properties that help not to repeat them in every single grid cell.
 -I learned a little bit more about the use of css grid when it comes to size like "auto" or "mixmax". 
 
-I am proud of making my own menu icon and the animation on click.
+I am proud of making my own menu icon and the animation on click, and how I used the ::after pseudo element to add a white overlay effect on the galery images.
 
 ```css
 & > .menu {   
@@ -79,6 +79,23 @@ I am proud of making my own menu icon and the animation on click.
                     }
                 }
             }
+
+
+
+    & > div {
+        width: 100%;
+
+        &:hover:not(:first-of-type) {
+
+           &::after {
+            display: block;
+            content: "";
+            background: linear-gradient(to top, $color-white-transparent 0, $color-white-transparent 50%);
+            width: 100%;
+            height: 100%;
+           }
+        }
+    }
 ```
 
 ### Continued development

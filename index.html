@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport", content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="noopener" href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-  <link rel="noopener" href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
   </head>
 <body>
 
@@ -50,7 +45,7 @@
       <div class="container">
         <div class="display">
           <div class="display_image">
-            <img srcset="images/desktop/image-interactive.jpg 1440w, images/mobile/image-interactive.jpg 375w" src="images/desktop/image-interactive.jpg" alt="man with VR camera">
+            <img src="images/desktop/image-interactive.jpg" srcset="images/desktop/image-interactive.jpg 1440w, images/mobile/image-interactive.jpg 375w" sizes="(max-width: 1440px) 100%, (max-width: 768px) 70%" alt="man with VR camera">
           </div>
           <div class="display_text">
             <h2 class="display_title">
@@ -134,10 +129,12 @@
   </footer>
 
   <div class="attribution">
-    Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded with &#128512; by <a href="mailto:gaeln92@yahoo.fr">Souleymane Gael Nongnogo</a>.
+    <p class="attribution_text">
+      Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded with &#128512; by <a href="mailto:gaeln92@yahoo.fr">Souleymane Gael Nongnogo</a>.
+    </p>
   </div>
-  <script defer>
+  <script>
     const menu = document.querySelector(".menu");
     menu.addEventListener("click", ()=> {
       menu.parentElement.classList.toggle("active");

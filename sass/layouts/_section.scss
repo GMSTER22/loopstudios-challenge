@@ -79,6 +79,8 @@
 
     &_paragraph {
         font-family: 'Josefin Sans', sans-serif;
+        color: $color-grey;
+        font-weight: 400;
         line-height: 1.5em;
 
         @include respond(laptop) {
@@ -174,9 +176,15 @@
     & > div {
         width: 100%;
 
-        & > img {
-            width: 100%; 
+        &:hover:not(:first-of-type) {
+
+           &::after {
+            display: block;
+            content: "";
+            background: linear-gradient(to top, $color-white-transparent 0, $color-white-transparent 50%);
+            width: 100%;
             height: 100%;
+           }
         }
     }
 
@@ -184,6 +192,8 @@
         grid-area: 2/1/3/2;
         background: url(../images/desktop/image-deep-earth.jpg) no-repeat center;
         @include textPosition;
+
+        
 
         @include respond(phone) {
             grid-area: 2/1/3/2;
@@ -382,20 +392,20 @@
 }
 
 .attribution {
-    background-color: #7c04b3;
+    background-color: #ffffff;
     font-size: 1.6rem;
-    color: $color-white;
+    color: $color-black;
     padding: .8rem 0;
     text-align: center;
 
     & a {
         display: inline-block;
-        color: #96FA1B;
+        color: rgb(12, 16, 247);
         text-decoration: none;
         transition: transform .2s linear;
 
         &:hover {
-            color: $color-white;
+            color: green;
             transform: scale(1.05);
         }
     }
